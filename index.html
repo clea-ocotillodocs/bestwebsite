@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocotillo Document Services, LLC — Immigration Document Preparation</title>
+<meta name="description" content="Affordable immigration document preparation for individuals and families across the U.S. Based in Phoenix, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#fff;font-size:16px;line-height:1.7}
+  a{text-decoration:none;color:inherit}
+
+  /* NAV */
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;border-bottom:1px solid #e8e0d8;background:#fff;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo-icon{width:36px;height:36px;background:#8B4513;border-radius:8px;display:flex;align-items:center;justify-content:center}
+  .logo-text{font-size:15px;font-weight:500;color:#1a1a1a;line-height:1.2}
+  .logo-sub{font-size:11px;color:#888;font-weight:400}
+  .nav-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .nav-links{display:flex;gap:20px;align-items:center}
+  .nav-links a{font-size:14px;color:#555}
+  .nav-links a:hover{color:#8B4513}
+  .nav-cta{background:#8B4513;color:#fff!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:500}
+  .nav-cta:hover{background:#7a3a10}
+  .lang-toggle{display:flex;border:2px solid #8B4513;border-radius:999px;overflow:hidden;font-size:13px;font-weight:500}
+  .lang-btn{padding:6px 14px;cursor:pointer;border:none;background:transparent;color:#8B4513;font-family:'Inter',sans-serif;font-size:13px;font-weight:500}
+  .lang-btn.active{background:#8B4513;color:#fff}
+  .lang-btn:hover:not(.active){background:#fdf0e8}
+
+  /* HERO */
+  .hero{padding:56px 32px 48px;background:#faf6f2;border-bottom:1px solid #e8e0d8}
+  .hero-tag{display:inline-block;background:#f5e6d8;color:#8B4513;font-size:12px;padding:4px 12px;border-radius:999px;margin-bottom:16px;border:1px solid #d4a07a}
+  .hero h1{font-size:32px;font-weight:500;color:#1a1a1a;line-height:1.3;max-width:580px;margin-bottom:14px}
+  .hero p{font-size:16px;color:#555;max-width:520px;line-height:1.7;margin-bottom:28px}
+  .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn-primary{background:#8B4513;color:#fff;padding:11px 24px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:'Inter',sans-serif}
+  .btn-primary:hover{background:#7a3a10}
+  .btn-secondary{background:transparent;color:#8B4513;padding:11px 24px;border-radius:8px;font-size:14px;font-weight:500;border:2px solid #8B4513;cursor:pointer;font-family:'Inter',sans-serif}
+  .btn-secondary:hover{background:#fdf0e8}
+
+  /* DISCLAIMER */
+  .disclaimer-bar{padding:10px 32px;background:#fdf6f0;border-bottom:1px solid #d4a07a;font-size:12px;color:#8B4513;text-align:center}
+
+  /* SECTIONS */
+  .section{padding:48px 32px}
+  .section-label{font-size:12px;color:#8B4513;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .section h2{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:8px}
+  .section-sub{font-size:15px;color:#555;margin-bottom:32px;max-width:500px;line-height:1.6}
+  .divider{height:1px;background:#e8e0d8;margin:0 32px}
+
+  /* BENEFITS */
+  .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+  .benefit-card{background:#fff;border:1px solid #e8e0d8;border-radius:12px;padding:20px}
+  .benefit-icon{width:36px;height:36px;background:#f5e6d8;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:#8B4513;font-size:20px}
+  .benefit-card h3{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:6px}
+  .benefit-card p{font-size:13px;color:#555;line-height:1.6}
+
+  /* SERVICES */
+  .services-section{padding:48px 32px;background:#faf6f2}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .service-card{background:#fff;border:1px solid #e8e0d8;border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start}
+  .service-icon{width:40px;height:40px;min-width:40px;background:#f5e6d8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#8B4513;font-size:20px}
+  .service-card h3{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px}
+  .service-card p{font-size:13px;color:#555;line-height:1.5}
+
+  /* STATS */
+  .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;padding:40px 32px;background:#fff;border-top:1px solid #e8e0d8;border-bottom:1px solid #e8e0d8}
+  .stat{text-align:center}
+  .stat-num{font-size:28px;font-weight:500;color:#8B4513;margin-bottom:4px}
+  .stat-label{font-size:13px;color:#555}
+
+  /* CONTACT */
+  .contact-section{padding:48px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  @media(max-width:640px){.contact-section{grid-template-columns:1fr}}
+  .contact-info h2{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:8px}
+  .contact-info p{font-size:14px;color:#555;line-height:1.7;margin-bottom:24px}
+  .contact-detail{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:14px;color:#555}
+  .contact-detail i{color:#8B4513;font-size:18px}
+  .contact-form{background:#faf6f2;border-radius:12px;border:1px solid #e8e0d8;padding:24px}
+  .contact-form h3{font-size:16px;font-weight:500;color:#1a1a1a;margin-bottom:20px}
+  .form-group{margin-bottom:14px}
+  .form-group label{display:block;font-size:12px;color:#555;margin-bottom:6px}
+  .form-group input,.form-group select,.form-group textarea{width:100%;font-size:14px;padding:8px 12px;border-radius:8px;border:1px solid #d4c4b8;background:#fff;color:#1a1a1a;font-family:'Inter',sans-serif}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:2px solid #8B4513;border-color:transparent}
+  .form-group textarea{height:80px;resize:none}
+  .submit-btn{width:100%;background:#8B4513;color:#fff;padding:11px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:'Inter',sans-serif;margin-top:4px}
+  .submit-btn:hover{background:#7a3a10}
+
+  /* FOOTER */
+  .footer{padding:24px 32px;border-top:1px solid #e8e0d8;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;background:#fff}
+  .footer p{font-size:12px;color:#888}
+  .footer-disclaimer{font-size:11px;color:#888;max-width:420px;line-height:1.5;text-align:right}
+
+  @media(max-width:700px){
+    .nav{padding:12px 16px}
+    .nav-links{display:none}
+    .hero{padding:36px 16px 32px}
+    .hero h1{font-size:24px}
+    .section,.services-section{padding:36px 16px}
+    .stats-row{padding:28px 16px}
+    .contact-section{padding:36px 16px}
+    .footer{padding:20px 16px}
+    .footer-disclaimer{text-align:left}
+    .divider{margin:0 16px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">
+    <div class="logo-icon">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M10 2C10 2 6 6 6 10M10 2C10 2 14 6 14 10M6 7C6 7 3 8 3 11M14 7C14 7 17 8 17 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div>
+      <div class="logo-text">Ocotillo Document Services</div>
+      <div class="logo-sub">LLC — Arizona</div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+    <div class="nav-links">
+      <a href="#services" id="nav-services">Services</a>
+      <a href="#about" id="nav-about">About</a>
+      <a href="#faq" id="nav-faq">FAQ</a>
+      <a href="#contact" class="nav-cta" id="nav-book">Book Appointment</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><i class="ti ti-file-certificate"></i> <span id="tag-text">Licensed Document Preparation</span></div>
+  <h1 id="hero-h1">Immigration document preparation — affordable, accurate, and available nationwide.</h1>
+  <p id="hero-p">Ocotillo Document Services helps individuals and families across the U.S. navigate immigration paperwork with confidence. We prepare your documents — you stay in control.</p>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <i class="ti ti-calendar"></i> <span id="btn-consult">Book a Free Consultation</span>
+    </button>
+    <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" id="btn-view">View Services</button>
+  </div>
+</section>
+
+<div class="disclaimer-bar" id="disclaimer-bar">
+  <i class="ti ti-info-circle"></i> We are a legal document preparation service, not a law firm. We are not licensed to practice law or provide legal advice.
+</div>
+
+<section class="section" id="about">
+  <div class="section-label" id="why-label">Why choose us</div>
+  <h2 id="why-h2">Document prep made simple</h2>
+  <p class="section-sub" id="why-sub">We make the process less stressful by handling the paperwork so you can focus on what matters most.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-wallet"></i></div>
+      <h3 id="b1-h">Affordable pricing</h3>
+      <p id="b1-p">A fraction of attorney fees — without sacrificing accuracy or attention to detail.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-clock"></i></div>
+      <h3 id="b2-h">Fast turnaround</h3>
+      <p id="b2-p">Most documents completed within 5–10 business days after we receive your information.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-world"></i></div>
+      <h3 id="b3-h">Serving all 50 states</h3>
+      <p id="b3-p">We work with clients located anywhere in the U.S. — no need to be in Arizona.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="services-section" id="services">
+  <div class="section-label" id="svc-label">Our services</div>
+  <h2 id="svc-h2">Immigration document preparation</h2>
+  <p class="section-sub" id="svc-sub">We assist with a wide range of USCIS and immigration-related forms.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><i class="ti ti-users"></i></div>
+      <div><h3 id="s1-h">Family-based petitions</h3><p id="s1-p">I-130, I-485, and related forms for family visa sponsorship.</p></div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="ti ti-id-badge"></i></div>
+      <div><h3 id="s2-h">Naturalization (N-400)</h3><p id="s2-p">Citizenship application preparation and document review.</p></div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="ti ti-refresh"></i></div>
+      <div><h3 id="s3-h">Green card renewal</h3><p id="s3-p">I-90 form preparation for permanent resident card renewal.</p></div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="ti ti-file-text"></i></div>
+      <div><h3 id="s4-h">DACA renewal</h3><p id="s4-p">I-821D and I-765 preparation for DACA applicants.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-row">
+  <div class="stat"><div class="stat-num">100+</div><div class="stat-label" id="stat1">Documents completed</div></div>
+  <div class="stat"><div class="stat-num">5★</div><div class="stat-label" id="stat2">Client satisfaction</div></div>
+  <div class="stat"><div class="stat-num" id="stat3-num">Nationwide</div><div class="stat-label" id="stat3">U.S.-wide service</div></div>
+</div>
+
+<section class="contact-section" id="contact">
+  <div class="contact-info">
+    <div class="section-label" id="contact-label">Get in touch</div>
+    <h2 id="contact-h2">Ready to get started?</h2>
+    <p id="contact-p">Book a free consultation and we'll walk you through the documents you need and how we can help.</p>
+    <div class="contact-detail"><i class="ti ti-phone"></i> 480-352-0928</div>
+    <div class="contact-detail"><i class="ti ti-mail"></i> clea@ocotillodocs.com</div>
+    <div class="contact-detail"><i class="ti ti-map-pin"></i> <span id="location-text">Phoenix, Arizona — serving clients nationwide</span></div>
+    <div class="contact-detail"><i class="ti ti-clock"></i> <span id="hours-text">Mon–Fri, 9am–5pm</span></div>
+  </div>
+  <div class="contact-form">
+    <h3 id="form-h3">Send us a message</h3>
+    <div class="form-group"><label id="lbl-name">Your name</label><input type="text" id="inp-name" placeholder="Full name"></div>
+    <div class="form-group"><label id="lbl-email">Email address</label><input type="email" id="inp-email" placeholder="email@example.com"></div>
+    <div class="form-group"><label id="lbl-svc">Service needed</label>
+      <select id="svc-select">
+        <option id="opt1">Family-based petition</option>
+        <option id="opt2">Naturalization</option>
+        <option id="opt3">Green card renewal</option>
+        <option id="opt4">DACA renewal</option>
+        <option id="opt5">Other</option>
+      </select>
+    </div>
+    <div class="form-group"><label id="lbl-msg">Message</label><textarea id="inp-msg" placeholder="Tell us a little about your situation..."></textarea></div>
+    <button class="submit-btn" id="submit-btn">Send message</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Ocotillo Document Services, LLC. All rights reserved.</p>
+  <p class="footer-disclaimer" id="footer-disclaimer">We are not attorneys and do not provide legal advice. Document preparation services only. Always consult a licensed immigration attorney for legal guidance.</p>
+</footer>
+
+<script>
+const t = {
+  en: {
+    'tag-text':'Licensed Document Preparation',
+    'hero-h1':'Immigration document preparation — affordable, accurate, and available nationwide.',
+    'hero-p':'Ocotillo Document Services helps individuals and families across the U.S. navigate immigration paperwork with confidence. We prepare your documents — you stay in control.',
+    'btn-consult':'Book a Free Consultation','btn-view':'View Services',
+    'nav-services':'Services','nav-about':'About','nav-faq':'FAQ','nav-book':'Book Appointment',
+    'disclaimer-bar':'<i class="ti ti-info-circle"></i> We are a legal document preparation service, not a law firm. We are not licensed to practice law or provide legal advice.',
+    'why-label':'Why choose us','why-h2':'Document prep made simple',
+    'why-sub':'We make the process less stressful by handling the paperwork so you can focus on what matters most.',
+    'b1-h':'Affordable pricing','b1-p':'A fraction of attorney fees — without sacrificing accuracy or attention to detail.',
+    'b2-h':'Fast turnaround','b2-p':'Most documents completed within 5–10 business days after we receive your information.',
+    'b3-h':'Serving all 50 states','b3-p':'We work with clients located anywhere in the U.S. — no need to be in Arizona.',
+    'svc-label':'Our services','svc-h2':'Immigration document preparation',
+    'svc-sub':'We assist with a wide range of USCIS and immigration-related forms.',
+    's1-h':'Family-based petitions','s1-p':'I-130, I-485, and related forms for family visa sponsorship.',
+    's2-h':'Naturalization (N-400)','s2-p':'Citizenship application preparation and document review.',
+    's3-h':'Green card renewal','s3-p':'I-90 form preparation for permanent resident card renewal.',
+    's4-h':'DACA renewal','s4-p':'I-821D and I-765 preparation for DACA applicants.',
+    'stat1':'Documents completed','stat2':'Client satisfaction','stat3-num':'Nationwide','stat3':'U.S.-wide service',
+    'contact-label':'Get in touch','contact-h2':'Ready to get started?',
+    'contact-p':'Book a free consultation and we\'ll walk you through the documents you need and how we can help.',
+    'location-text':'Phoenix, Arizona — serving clients nationwide','hours-text':'Mon–Fri, 9am–5pm',
+    'form-h3':'Send us a message','lbl-name':'Your name','lbl-email':'Email address',
+    'lbl-svc':'Service needed','lbl-msg':'Message',
+    'opt1':'Family-based petition','opt2':'Naturalization','opt3':'Green card renewal','opt4':'DACA renewal','opt5':'Other',
+    'submit-btn':'Send message',
+    'footer-disclaimer':'We are not attorneys and do not provide legal advice. Document preparation services only. Always consult a licensed immigration attorney for legal guidance.'
+  },
+  es: {
+    'tag-text':'Preparación de Documentos con Licencia',
+    'hero-h1':'Preparación de documentos de inmigración — accesible, precisa y disponible en todo el país.',
+    'hero-p':'Ocotillo Document Services ayuda a personas y familias en todo EE. UU. a gestionar su papeleo migratorio con confianza. Nosotros preparamos sus documentos — usted mantiene el control.',
+    'btn-consult':'Reservar Consulta Gratis','btn-view':'Ver Servicios',
+    'nav-services':'Servicios','nav-about':'Nosotros','nav-faq':'Preguntas','nav-book':'Reservar Cita',
+    'disclaimer-bar':'<i class="ti ti-info-circle"></i> Somos un servicio de preparación de documentos legales, no un bufete de abogados. No estamos autorizados para ejercer la abogacía ni brindar asesoramiento legal.',
+    'why-label':'Por qué elegirnos','why-h2':'Trámites simples y sin complicaciones',
+    'why-sub':'Hacemos el proceso menos estresante al encargarnos del papeleo para que usted pueda enfocarse en lo que más importa.',
+    'b1-h':'Precios accesibles','b1-p':'Una fracción del costo de un abogado — sin sacrificar precisión ni atención al detalle.',
+    'b2-h':'Entrega rápida','b2-p':'La mayoría de los documentos se completan en 5 a 10 días hábiles después de recibir su información.',
+    'b3-h':'Servicio en los 50 estados','b3-p':'Trabajamos con clientes en cualquier lugar de EE. UU. — no es necesario estar en Arizona.',
+    'svc-label':'Nuestros servicios','svc-h2':'Preparación de documentos migratorios',
+    'svc-sub':'Asistimos con una amplia variedad de formularios del USCIS y relacionados con inmigración.',
+    's1-h':'Peticiones familiares','s1-p':'Formularios I-130, I-485 y relacionados para patrocinio de visa familiar.',
+    's2-h':'Naturalización (N-400)','s2-p':'Preparación de solicitud de ciudadanía y revisión de documentos.',
+    's3-h':'Renovación de tarjeta verde','s3-p':'Preparación del formulario I-90 para renovación de residencia permanente.',
+    's4-h':'Renovación de DACA','s4-p':'Preparación de I-821D e I-765 para solicitantes de DACA.',
+    'stat1':'Documentos completados','stat2':'Satisfacción del cliente','stat3-num':'Nacional','stat3':'Servicio en todo EE. UU.',
+    'contact-label':'Contáctenos','contact-h2':'¿Listo para comenzar?',
+    'contact-p':'Reserve una consulta gratuita y le explicaremos qué documentos necesita y cómo podemos ayudarle.',
+    'location-text':'Phoenix, Arizona — atendemos clientes en todo el país','hours-text':'Lun–Vie, 9am–5pm',
+    'form-h3':'Envíenos un mensaje','lbl-name':'Su nombre','lbl-email':'Correo electrónico',
+    'lbl-svc':'Servicio necesario','lbl-msg':'Mensaje',
+    'opt1':'Petición familiar','opt2':'Naturalización','opt3':'Renovación de tarjeta verde','opt4':'Renovación de DACA','opt5':'Otro',
+    'submit-btn':'Enviar mensaje',
+    'footer-disclaimer':'No somos abogados y no ofrecemos asesoramiento legal. Solo servicios de preparación de documentos. Siempre consulte a un abogado de inmigración autorizado.'
+  }
+};
+
+function setLang(lang) {
+  const data = t[lang];
+  for (const [id, val] of Object.entries(data)) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = val;
+    else if (el.tagName === 'OPTION') el.textContent = val;
+    else el.innerHTML = val;
+  }
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+  document.documentElement.lang = lang;
+}
+</script>
+</body>
+</html>
